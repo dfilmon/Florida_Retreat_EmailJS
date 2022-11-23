@@ -28,34 +28,53 @@ export const ContactUs = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>First Name</label>
-      <input type="text" name="user_name" />
+    <form id="registerForm" ref={form} onSubmit={sendEmail}>
+      <div>
+        <label>First Name</label>
+        <input type="text" name="user_name" />
+      </div>
 
-      <label>Last Name</label>
-      <input type="text" name="user_name" />
+      <div>
+        <label>Last Name</label>
+        <input type="text" name="user_name" />
+      </div>
 
-      <label>Email</label>
-      <input type="email" name="user_email" />
+      <div>
+        <label>Email</label>
+        <input type="email" name="user_email" />
+      </div>
 
-      <label>Age</label>
-      <input type="text" name="user_age" />
+      <div>
+        <label>Age</label>
+        <input type="text" name="user_age" />
+      </div>
+      <div>
+        <label>What Grade are you in?</label>
+        <input type="text" name="user_grade" />
+      </div>
+      <div>
+        <label>What's your GPA? We will check in-person...</label>
+        <input type="text" name="user_gpa" />
+      </div>
 
-      <label>What Grade are you in?</label>
-      <input type="text" name="user_grade" />
-
-      <label>What's your GPA? We will check in-person...</label>
-      <input type="text" name="user_gpa" />
-
-      <label>Hair Length approved by which Sunday School Teacher?</label>
-      <input type="text" name="user_hair" />
-
-      <label>Behavior approved by which Sunday School Teacher? </label>
-      <input type="text" name="user_name" />
-
-      <label>Anything else you want to add?</label>
-      <textarea name="message" />
-      <input type="submit" defaultValue="Send" />
+      <div>
+        <label>Hair Length approved by which Sunday School Teacher?</label>
+        <input type="text" name="user_hair" />
+      </div>
+      <div>
+        <label>Behavior approved by which Sunday School Teacher? </label>
+        <input type="text" name="user_name" />
+      </div>
+      <div>
+        <label>Anything else you want to add?</label>
+        <textarea name="message" />
+        <input
+          id="registerButton"
+          class="btn-primary"
+          type="submit"
+          defaultValue="Send"
+        />
+      </div>
     </form>
   );
 };
@@ -111,15 +130,15 @@ export default function App() {
             <h1>Spiritual</h1>
             <h1>Retreat</h1>
             <h6>Orlando Florida...</h6>
-            <button>I'm Going</button>
+            <button class="btn-primary">I'm Going</button>
           </div>
-          <div id="heroRight">Image goes here</div>
+          <div id="heroRight"></div>
         </div>
 
         {/* <!-- REQUIREMENTS ENDS --> */}
 
         <div id="requirements" className="componentContainer">
-          <div id="reqLeft">Image goes here</div>
+          <div id="reqLeft"></div>
           <div id="reqRight">
             <h1>Requirements</h1>
             <ul>
@@ -139,17 +158,77 @@ export default function App() {
           </div>
         </div>
 
-        {/* <!-- REQUIREMENTS ENDS --> */}
+        {/* <!-- CONNECT ENDS --> */}
 
-        <div id="connect" className="componentContainer"></div>
+        <div id="connect" className="componentContainer">
+          <div id="connectLeft">
+            <h1>Connect</h1>
+            <p>
+              Life is short, the year is even shorter. You need great spiritual
+              examples and models in order to have a successful 2023. Get a
+              great, focused start to the new Year and see you there.
+            </p>
+            <ul>
+              <li>Don't let Social Media be your entire life</li>
+              <li>Disconnect from your phone to truly connect</li>
+              <li>Make real physical friends not just digital ones</li>
+              <li>Make the most of your life and create memories</li>
+            </ul>
+          </div>
+          <div id="connectRight"></div>
+        </div>
 
-        <div id="engage" className="componentContainer"></div>
+        <div id="engage" className="componentContainer">
+          <div id="engageLeft"></div>
+          <div id="engageRight">
+            <h1>Engage</h1>
+            <p>
+              In this trip you’ll rejuvenate with other people your age Wether
+              it be through sports, spirit, and faith. This could be a good
+              opportunity to be more involved with the great role models.
+            </p>
+            <ul>
+              <li>Learn about the power of Habits</li>
+              <li>Cook, Clean and live like an Adult</li>
+              <li>Learn to sleep and wake up without your phone</li>
+              <li>Set yourself up for a great year</li>
+            </ul>
 
-        <div id="whyFlorida" className="componentContainer"></div>
+            <h1>Price</h1>
+            <ul>
+              <li>Save $400 Total</li>
+              <li>$200 for Air Ticket</li>
+              <li>$50 for Airbnb</li>
+              <li>$150 for pocket money</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="whyFlorida" className="componentContainer">
+          <div id="whyFloridaLeft">
+            <h1>Why Florida?</h1>
+            <p>
+              We want to go Florida to be more social with the people in our
+              Church lives by getting to know them better and make amazing
+              memories with our Church friends and family.
+            </p>
+            <ul>
+              <li>It's cold, Florida is not</li>
+              <li>Winter blues are a real thing</li>
+              <li>Celebrating the Birth of our LORD after fasting</li>
+              <li>MLK Day Weekend so we get an extra day</li>
+            </ul>
+          </div>
+          <div id="whyFloridaRight"></div>
+        </div>
 
         {/* <!-- REGISTER BEGINS --> */}
 
         <div id="register" className="componentContainer">
+          <h1>Register Here</h1>
+          <h6>This is manditory and must be submitted before Dec 10th.</h6>
+          <br />
+          <br />
           <ContactUs />
         </div>
 
