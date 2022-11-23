@@ -157,3 +157,94 @@ input {
 #registerButton {
   margin-top: 3em;
 }
+
+.titleOne {
+  font-size: 7em;
+}
+
+.titleTwo {
+  font-size: 8em;
+}
+
+/* breakpoints */
+@media only screen and (max-width: 600px) {
+  .titleOne {
+    font-size: 3em;
+  }
+
+  .titleTwo {
+    font-size: 3em;
+  }
+
+  #hero {
+    display: block;
+    margin-bottom: 0em;
+    height: fit-content;
+    margin-top: -20px;
+  }
+
+  #heroRight {
+    width: 90vw;
+    display: none;
+  }
+
+  #requirements {
+    display: block;
+    margin: 0;
+  }
+
+  #reqLeft {
+    width: 90vw;
+  }
+  #reqRight {
+    width: 90vw;
+  }
+
+  #connect {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+  #connectLeft {
+    width: 90vw;
+    margin: 0;
+  }
+  #connectRight {
+    width: 85vw;
+    margin: 0;
+  }
+
+  #engage {
+    display: block;
+    margin: 0;
+  }
+  #engageLeft {
+    width: 90vw;
+  }
+  #engageRight {
+    width: 90vw;
+  }
+
+  #whyFlorida {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+  #whyFloridaLeft {
+    width: 90vw;
+    margin: 0;
+  }
+  #whyFloridaRight {
+    width: 85vw;
+    margin: 0;
+  }
+
+  #registerForm div {
+    width: 100%;
+    margin-right: 3em;
+  }
+
+  #register {
+    padding: 1em;
+  }
+}

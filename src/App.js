@@ -127,10 +127,13 @@ export default function App() {
       <div id="app">
         <div id="hero" className="componentContainer">
           <div id="heroLeft">
-            <h1>Spiritual</h1>
-            <h1>Retreat</h1>
-            <h6>Orlando Florida...</h6>
-            <button class="btn-primary">I'm Going</button>
+            <h1 className="titleOne">Spiritual</h1>
+            <h1 className="titleTwo">Retreat</h1>
+            <h6 className="titleThree">Orlando Florida January 13-16 2023</h6>
+            <a href="#register">
+              {' '}
+              <button class="btn-primary">I'm Going</button>
+            </a>
           </div>
           <div id="heroRight"></div>
         </div>
@@ -192,14 +195,6 @@ export default function App() {
               <li>Cook, Clean and live like an Adult</li>
               <li>Learn to sleep and wake up without your phone</li>
               <li>Set yourself up for a great year</li>
-            </ul>
-
-            <h1>Price</h1>
-            <ul>
-              <li>Save $400 Total</li>
-              <li>$200 for Air Ticket</li>
-              <li>$50 for Airbnb</li>
-              <li>$150 for pocket money</li>
             </ul>
           </div>
         </div>
