@@ -3,6 +3,8 @@ import './style.css';
 
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import Requirements from './components/Requirements.js'
+
 
 export const ContactUs = () => {
   const form = useRef();
@@ -138,28 +140,11 @@ export default function App() {
           <div id="heroRight"></div>
         </div>
 
-        {/* <!-- REQUIREMENTS ENDS --> */}
 
-        <div id="requirements" className="componentContainer">
-          <div id="reqLeft"></div>
-          <div id="reqRight">
-            <h1>Requirements</h1>
-            <ul>
-              <li>8th Grade+</li>
-              <li>GPA 3.0+</li>
-              <li>Hair must be short</li>
-              <li>Sunday School Teacher Approval</li>
-            </ul>
 
-            <h1>Price</h1>
-            <ul>
-              <li>Save $400 Total</li>
-              <li>$200 for Air Ticket</li>
-              <li>$50 for Airbnb</li>
-              <li>$150 for pocket money</li>
-            </ul>
-          </div>
-        </div>
+<Requirements />
+
+
 
         {/* <!-- CONNECT ENDS --> */}
 
