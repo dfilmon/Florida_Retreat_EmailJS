@@ -3,8 +3,7 @@ import './style.css';
 
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Requirements from './components/Requirements.js'
-
+import Requirements from './components/Requirements.js';
 
 export const ContactUs = () => {
   const form = useRef();
@@ -140,13 +139,9 @@ export default function App() {
           <div id="heroRight"></div>
         </div>
 
+        <Requirements />
 
-
-<Requirements />
-
-
-
-        {/* <!-- CONNECT ENDS --> */}
+        {/* <!-- CONNECT --> */}
 
         <div id="connect" className="componentContainer">
           <div id="connectLeft">
@@ -165,6 +160,8 @@ export default function App() {
           </div>
           <div id="connectRight"></div>
         </div>
+
+        {/* <!-- ENGAGE --> */}
 
         <div id="engage" className="componentContainer">
           <div id="engageLeft"></div>
@@ -202,7 +199,7 @@ export default function App() {
           <div id="whyFloridaRight"></div>
         </div>
 
-        {/* <!-- REGISTER BEGINS --> */}
+        {/* <!-- REGISTER --> */}
 
         <div id="register" className="componentContainer">
           <h1>Register Here</h1>
@@ -212,12 +209,15 @@ export default function App() {
           <ContactUs />
         </div>
 
-        {/* <!-- REGISTER ENDS --> */}
-
-        {/* <!-- FOOTER ENDS --> */}
-        <div id="footer" className="componentContainer"></div>
+        {/* Dev Credits */}
+        <h1>Engineer Credits</h1>
+        <ul>
+          <li>D Awet</li>
+          <li>Luwam</li>
+          <li>Henos</li>
+          <li>Henos' Friend</li>
+        </ul>
       </div>
-      {/* <!-- FOOTER ENDS --> */}s
     </div>
   );
 }
