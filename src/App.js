@@ -1,16 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
-
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Requirements from './components/Requirements.js';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const ContactUs = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [age, setAge] = useState('');
+  const [grade, setGrade] = useState('');
+  const [gpa, setGPA] = useState('');
+  const [hairLength, setHairLength] = useState('');
+  const [behavior, setBehavior] = useState('');
+  const [anythingElse, setAnythingElse] = useState('');
+
+  const notify = function () {
+    if (
+      firstName &&
+      lastName &&
+      email &&
+      age &&
+      grade &&
+      gpa &&
+      hairLength &&
+      behavior &&
+      anythingElse
+    ) {
+      toast("You're all set. God Bless.");
+    } else {
+      //toast("You're all set. God Bless.");
+    }
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         'service_irpyw2f',
@@ -26,57 +54,128 @@ export const ContactUs = () => {
           console.log(error.text);
         }
       );
+
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setAge('');
+    setGrade('');
+    setGPA('');
+    setHairLength('');
+    setBehavior('');
+    setAnythingElse('');
   };
 
   return (
-    <form id="registerForm" ref={form} onSubmit={sendEmail}>
+    <div>
       <div>
-        <label>First Name</label>
-        <input type="text" name="user_name" />
+        <ToastContainer />
       </div>
+      <form id="registerForm" ref={form} onSubmit={sendEmail}>
+        <div>
+          <label>First Name</label>
+          <input
+            type="text"
+            name="user_firstName"
+            required
+            value={firstName}
+            onChange={(event) => setFirstName(event.target.value)}
+          />
+        </div>
 
-      <div>
-        <label>Last Name</label>
-        <input type="text" name="user_name" />
-      </div>
+        <div>
+          <label>Last Name</label>
+          <input
+            type="text"
+            name="user_lastName"
+            required
+            value={lastName}
+            onChange={(event) => setLastName(event.target.value)}
+          />
+        </div>
 
-      <div>
-        <label>Email</label>
-        <input type="email" name="user_email" />
-      </div>
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            name="user_email"
+            required
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </div>
 
-      <div>
-        <label>Age</label>
-        <input type="text" name="user_age" />
-      </div>
-      <div>
-        <label>What Grade are you in?</label>
-        <input type="text" name="user_grade" />
-      </div>
-      <div>
-        <label>What's your GPA? We will check in-person...</label>
-        <input type="text" name="user_gpa" />
-      </div>
+        <div>
+          <label>Age</label>
+          <input
+            type="text"
+            name="user_age"
+            required
+            value={age}
+            onChange={(event) => setAge(event.target.value)}
+          />
+        </div>
+        <div>
+          <label>What Grade are you in?</label>
+          <input
+            type="text"
+            name="user_grade"
+            required
+            value={grade}
+            onChange={(event) => setGrade(event.target.value)}
+          />
+        </div>
+        <div>
+          <label>What's your GPA? We will check in-person...</label>
+          <input
+            type="text"
+            name="user_gpa"
+            required
+            value={gpa}
+            onChange={(event) => setGPA(event.target.value)}
+          />
+        </div>
 
-      <div>
-        <label>Hair Length approved by which Sunday School Teacher?</label>
-        <input type="text" name="user_hair" />
-      </div>
-      <div>
-        <label>Behavior approved by which Sunday School Teacher? </label>
-        <input type="text" name="user_name" />
-      </div>
-      <div>
-        <label>Anything else you want to add?</label>
-        <textarea name="message" />
-        <input
-          id="registerButton"
-          class="btn-primary"
-          type="submit"
-          defaultValue="Send"
-        />
-      </div>
-    </form>
+        <div>
+          <label>Hair Length approved by which Sunday School Teacher?</label>
+          <input
+            type="text"
+            name="user_hair"
+            required
+            value={hairLength}
+            onChange={(event) => setHairLength(event.target.value)}
+          />
+        </div>
+        <div>
+          <label>Behavior approved by which Sunday School Teacher? </label>
+          <input
+            type="text"
+            name="user_behavior"
+            required
+            value={behavior}
+            onChange={(event) => setBehavior(event.target.value)}
+          />
+        </div>
+        <div>
+          <label>Anything else you want to add?</label>
+          <textarea
+            required
+            name="user_message"
+            value={anythingElse}
+            onChange={(event) => setAnythingElse(event.target.value)}
+          />
+          <input
+            id="registerButton"
+            class="btn-primary"
+            type="submit"
+            defaultValue="Send"
+            required
+            value="Submit"
+            onClick={notify}
+          />
+        </div>
+      </form>
+    </div>
   );
 };
 
