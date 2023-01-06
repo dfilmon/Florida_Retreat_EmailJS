@@ -209,14 +209,6 @@ export default function App() {
           <ContactUs />
         </div>
 
-        {/* Dev Credits */}
-        <h1>Engineer Credits</h1>
-        <ul>
-          <li>D Awet</li>
-          <li>Luwam</li>
-          <li>Henos</li>
-          <li>Henos' Friend</li>
-        </ul>
       </div>
     </div>
   );
